@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header .logo {
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header nav {
+      float: right;
+    }
+
+    header::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    header nav ul {
+      list-style: none;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: #4e73df;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #fff;
+      color: #4e73df;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">MyBrand</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to My Homepage</h2>
+      <p>Your solution for modern web design and development.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Fast</h3>
+        <p>Optimized for speed and performance.</p>
+      </div>
+      <div class="feature">
+        <h3>Responsive</h3>
+        <p>Looks great on all screen sizes.</p>
+      </div>
+      <div class="feature">
+        <h3>Customizable</h3>
+        <p>Easy to edit and make your own.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
