@@ -60,3 +60,10 @@ def new_student(request):
             })
 
     return render(request, "newstudent.html", {"colleges": colleges})
+
+def new_college(request):
+    if request.method == 'POST':
+        pass
+    else:
+        form = CollegeForm()
+    return render(request,'newcollege.html',{'form':form})
