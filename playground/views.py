@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
+from playground.forms import CollegeForm
 from playground.models import Student,College
 
 def say_hello(request):
@@ -63,7 +63,10 @@ def new_student(request):
 
 def new_college(request):
     if request.method == 'POST':
-        pass
+        form = CollegeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('new-college')
     else:
         form = CollegeForm()
     return render(request,'newcollege.html',{'form':form})
