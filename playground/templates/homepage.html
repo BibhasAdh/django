@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Homepage</title>
+  <title>SMS</title>
   <style>
     * {
       margin: 0;
@@ -80,9 +81,10 @@
 
     .features {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: flex-start;
       padding: 50px 0;
-      gap: 20px;
+      gap: 40px;
       flex-wrap: wrap;
     }
 
@@ -90,10 +92,17 @@
       background: #fff;
       padding: 20px;
       border-radius: 8px;
-      flex: 1;
-      min-width: 250px;
+      width: 300px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
+    }
+
+    .feature a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #4e73df;
+      font-weight: bold;
     }
 
     footer {
@@ -108,13 +117,13 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">MyBrand</h1>
+      <h1 class="logo">SMS</h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'addCollege' %}">Add College</a></li>
+          <li><a href="{% url 'addStudent' %}">Add Student</a></li>
+          <li><a href="{% url 'student-list' %}">Student List</a></li>
         </ul>
       </nav>
     </div>
@@ -122,26 +131,22 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Welcome to My Homepage</h2>
-      <p>Your solution for modern web design and development.</p>
-      <a href="#" class="btn">Get Started</a>
+      <h2>Welcome to Student Management System</h2>
+      <p>Your solution for managing students and colleges</p>
+      <a href="{% url 'new-student' %}" class="btn">Register New Student</a>
     </div>
   </section>
 
   <section class="features">
-    <div class="container">
-      <div class="feature">
-        <h3>Fast</h3>
-        <p>Optimized for speed and performance.</p>
-      </div>
-      <div class="feature">
-        <h3>Responsive</h3>
-        <p>Looks great on all screen sizes.</p>
-      </div>
-      <div class="feature">
-        <h3>Customizable</h3>
-        <p>Easy to edit and make your own.</p>
-      </div>
+    <div class="feature">
+      <h3>Add College</h3>
+      <p>Add a new college to the student management system</p>
+      <a href="{% url 'new-college' %}">Go to Add College</a>
+    </div>
+    <div class="feature">
+      <h3>View Students</h3>
+      <p>See a list of all registered students.</p>
+      <a href="{% url 'student-list' %}">Go to Student List</a>
     </div>
   </section>
 
